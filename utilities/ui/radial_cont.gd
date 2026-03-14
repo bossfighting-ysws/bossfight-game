@@ -52,6 +52,7 @@ func _ready() -> void:
 	self.scroll_angle = 0
 	self.target_scroll_angle = self.scroll_angle
 	_lerp_cooldown = max_lerp_cooldown
+	closest_child_changed.emit(get_current_child(), get_closest_idx())
 
 func _notification(what):
 	if what == NOTIFICATION_SORT_CHILDREN:

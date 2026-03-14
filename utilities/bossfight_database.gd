@@ -4,10 +4,14 @@ extends Node
 ## Array that contains all bossfights in the ysws.
 ## REMEMBER: Add your BossfightData resource to this list, or it won't show up.
 var all_bossfights : Array[BossfightData] = [
-	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres")
-	
+	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
 ]
 
+## Returns all valid bossfights, using is_bossfight_valid checking
 func get_all_bossfights() -> Array[BossfightData]:
 	var out : Array[BossfightData] = []
 	for bf in all_bossfights:
@@ -15,6 +19,7 @@ func get_all_bossfights() -> Array[BossfightData]:
 			out.append(bf)
 	return out
 
+## Checks that the bossfight is valid; scene, title, description for now
 func is_bossfight_valid(bf:BossfightData) -> bool:
 	if not bf: return false
 	if not bf.bossfight_scene.can_instantiate(): return false

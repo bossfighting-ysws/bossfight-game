@@ -12,7 +12,7 @@ class_name BossfightShowcase
 		bossfight_data = v
 		_update_labels()
 var null_title := "Missing"
-var null_description := "If you see this, something is wrong. BossfigthData missing?"
+var null_description := "If you see this, something is wrong. BossfightData missing?"
 
 func _ready() -> void:
 	_update_labels()

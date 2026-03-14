@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 GameManager="*uid://j3na526uqryd"
 SignalBus="*uid://dggmdkqgqavv3"
+BossfightDatabase="*uid://bkme4kodbyvlh"
 
 [display]
 
