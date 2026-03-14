@@ -42,7 +42,7 @@ expand_mode = 3
 [node name="BossfightSelector" parent="HBoxContainer" unique_id=1761212608 instance=ExtResource("2_qe6cn")]
 layout_mode = 2
 size_flags_horizontal = 3
-target_scroll_angle = -1.3992595454461982e-136
+target_scroll_angle = 0.0
 
 [node name="BossfightShowcase" parent="HBoxContainer/BossfightSelector" unique_id=1792970499 instance=ExtResource("3_1vb1o")]
 layout_mode = 2

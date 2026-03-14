@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bvyjcirdqbqia"]
+
+[ext_resource type="Texture2D" uid="uid://de4sye8emek7s" path="res://bossfights/june/june.png" id="1_wps7y"]
+
+[node name="JuneBF" type="Control" unique_id=1891340147]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="June" type="Sprite2D" parent="." unique_id=706333554]
+position = Vector2(836, 464)
+texture = ExtResource("1_wps7y")

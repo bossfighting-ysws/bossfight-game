@@ -5,10 +5,9 @@ extends Node
 ## REMEMBER: Add your BossfightData resource to this list, or it won't show up.
 var all_bossfights : Array[BossfightData] = [
 	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/june/june_bossfight.tres"),
 	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
-	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
-	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
-	preload("res://bossfights/pixelsaver/pixelsaver_bossfight.tres"),
+	preload("res://bossfights/june/june_bossfight.tres"),
 ]
 
 ## Returns all valid bossfights, using is_bossfight_valid checking

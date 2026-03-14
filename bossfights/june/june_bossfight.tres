@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BossfightData" format=3 uid="uid://1r7kljdekrgl"]
+
+[ext_resource type="PackedScene" uid="uid://bvyjcirdqbqia" path="res://bossfights/june/june_bf.tscn" id="1_r2elb"]
+[ext_resource type="Script" uid="uid://blnwjsdx1c3mw" path="res://utilities/bossfight_data.gd" id="2_exdow"]
+[ext_resource type="Texture2D" uid="uid://de4sye8emek7s" path="res://bossfights/june/june.png" id="3_ton2v"]
+
+[resource]
+script = ExtResource("2_exdow")
+title = "June"
+description = "June's bossfight!"
+bossfight_scene = ExtResource("1_r2elb")
+texture = ExtResource("3_ton2v")
+metadata/_custom_type_script = "uid://blnwjsdx1c3mw"
