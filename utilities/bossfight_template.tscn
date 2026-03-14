@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d3nmjhnjld0ug"]
+
+[sub_resource type="GDScript" id="GDScript_tjkyg"]
+script/source = "@abstract
+extends Node
+class_name Bossfight
+
+signal scene_ended
+"
+
+[node name="BossfightTemplate" type="Node" unique_id=1081678230]
+script = SubResource("GDScript_tjkyg")

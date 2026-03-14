@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BossfightData" format=3 uid="uid://bj158p6whpyl7"]
+
+[ext_resource type="Script" uid="uid://blnwjsdx1c3mw" path="res://utilities/bossfight_data.gd" id="1_8kcx7"]
+[ext_resource type="PackedScene" uid="uid://dh6upye2wrqgn" path="res://bossfights/pixelsaver/pixel_saver_bossfight.tscn" id="1_mgfd7"]
+
+[resource]
+script = ExtResource("1_8kcx7")
+title = "PixelSaver"
+description = "Template"
+bossfight_scene = ExtResource("1_mgfd7")
+metadata/_custom_type_script = "uid://blnwjsdx1c3mw"
