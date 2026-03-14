@@ -22,16 +22,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_ilwks")
-selector = NodePath("Selector")
+selector = NodePath("Panel")
+offset = Vector2(-700, -100)
 radius = 1000.0
 separation = 200.0
-circle_center = Vector2(-700, 0)
+circle_center = Vector2(-500, 0)
 flip = true
 scale_multiplier = 0.0
-excluded = [NodePath("Selector")]
+excluded = [NodePath("Panel")]
 metadata/_custom_type_script = "uid://do68mss3tsghl"
 
-[node name="Selector" type="Panel" parent="RadialSelector" unique_id=1226349182]
+[node name="Panel" type="Panel" parent="RadialSelector" unique_id=1853419224]
+custom_minimum_size = Vector2(1000, 200)
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="RadialSelector" unique_id=440392256]
