@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cid38m4360e40"]
+
+[ext_resource type="Script" uid="uid://cksk0v3erjfoo" path="res://scenes/select_menu.gd" id="1_jsvjb"]
+[ext_resource type="Script" uid="uid://do68mss3tsghl" path="res://utilities/ui/radial_selector.gd" id="2_ilwks"]
+
+[node name="SelectMenu" type="Control" unique_id=467571329]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_jsvjb")
+metadata/_custom_type_script = "uid://b8w5nlr5civm6"
+
+[node name="RadialSelector" type="Container" parent="." unique_id=594392278 node_paths=PackedStringArray("selector", "excluded")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ilwks")
+selector = NodePath("Selector")
+radius = 1000.0
+separation = 200.0
+circle_center = Vector2(-700, 0)
+flip = true
+scale_multiplier = 0.0
+excluded = [NodePath("Selector")]
+metadata/_custom_type_script = "uid://do68mss3tsghl"
+
+[node name="Selector" type="Panel" parent="RadialSelector" unique_id=1226349182]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="RadialSelector" unique_id=440392256]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="RadialSelector" unique_id=163777984]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="RadialSelector" unique_id=639388563]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="RadialSelector" unique_id=1190455431]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="ColorRect5" type="ColorRect" parent="RadialSelector" unique_id=747436702]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="RadialSelector" unique_id=1780539391]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2

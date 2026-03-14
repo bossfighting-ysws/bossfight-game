@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://c46qh7pu75s83"]
+
+[resource]
+default_font_size = 40
+Button/font_sizes/font_size = 30
+VBoxContainer/constants/separation = 20
