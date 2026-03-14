@@ -2,6 +2,7 @@
 extends Container
 class_name RadialContainer
 
+signal closest_child_changed(child:Control, idx:int)
 @export var radius := 100.0 : 
 	set(val):
 		radius = val
@@ -37,10 +38,11 @@ class_name RadialContainer
 ## Children farther away from current angle are this much smaller
 @export var scale_multiplier := 0.1
 @export_category("Container Exclusion")
-@export var excluded: Array[Node] = []
+@export var excluded: Array[Control] = []
 @export var max_lerp_cooldown := 0.6
 var scroll_angle := 0.0
 var _lerp_cooldown : float 
+var _last_closest_idx := -1
 
 # Dragging
 var _dragging := false
@@ -80,11 +82,20 @@ func _process(delta: float) -> void:
 	
 	scroll_angle = lerpf(scroll_angle, target_scroll_angle, delta * 10.0)
 	_update_children()
+	_check_closest_changed()
 	
 	if Engine.is_editor_hint(): return
 	_lerp_cooldown -= delta
 	if _lerp_cooldown < 0.0:
 		lerp_to_closest()
+
+func _check_closest_changed():
+	var idx := get_closest_idx()
+	
+	if idx != _last_closest_idx:
+		_last_closest_idx = idx
+		var child := get_current_child()
+		closest_child_changed.emit(child, idx)
 
 ## Angle separation between two children
 func get_theta() -> float:
@@ -126,6 +137,9 @@ func get_closest_idx() -> int:
 	var idx = round(-(scroll_angle) / theta)
 	idx = clamp(idx, 0, children.size() - 1)
 	return idx
+
+func get_selected_child() -> Control:
+	return _get_layout_children()[get_closest_idx()]
 
 func lerp_to_closest():
 	var theta = get_theta()

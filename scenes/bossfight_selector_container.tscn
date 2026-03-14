@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cq577hjqtr1l0"]
+
+[ext_resource type="Script" uid="uid://do68mss3tsghl" path="res://utilities/ui/radial_selector.gd" id="1_1c74f"]
+
+[node name="RadialSelector" type="Container" unique_id=1761212608 node_paths=PackedStringArray("selector", "excluded")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1c74f")
+selector = NodePath("Selector")
+offset = Vector2(-700, -100)
+radius = 1000.0
+separation = 200.0
+circle_center = Vector2(-500, 0)
+flip = true
+target_scroll_angle = 0.2003348423231196
+scale_multiplier = 0.0
+excluded = [NodePath("Selector")]
+metadata/_custom_type_script = "uid://do68mss3tsghl"
+
+[node name="Selector" type="Panel" parent="." unique_id=1983474023]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2

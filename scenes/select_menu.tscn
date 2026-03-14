@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://cid38m4360e40"]
 
 [ext_resource type="Script" uid="uid://cksk0v3erjfoo" path="res://scenes/select_menu.gd" id="1_jsvjb"]
-[ext_resource type="Script" uid="uid://do68mss3tsghl" path="res://utilities/ui/radial_selector.gd" id="2_ilwks"]
+[ext_resource type="PackedScene" uid="uid://cq577hjqtr1l0" path="res://scenes/bossfight_selector_container.tscn" id="2_qe6cn"]
+[ext_resource type="PackedScene" uid="uid://mwdhvelwo8cn" path="res://scenes/bossfight_showcase.tscn" id="3_1vb1o"]
+[ext_resource type="Resource" uid="uid://bj158p6whpyl7" path="res://bossfights/pixelsaver/pixelsaver_bossfight.tres" id="4_qe6cn"]
 
-[node name="SelectMenu" type="Control" unique_id=467571329]
+[node name="SelectMenu" type="Control" unique_id=467571329 node_paths=PackedStringArray("selector", "texture_rect")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,50 +14,51 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_jsvjb")
+selector = NodePath("HBoxContainer/BossfightSelector")
+texture_rect = NodePath("HBoxContainer/Control/TextureRect")
 metadata/_custom_type_script = "uid://b8w5nlr5civm6"
 
-[node name="RadialSelector" type="Container" parent="." unique_id=594392278 node_paths=PackedStringArray("selector", "excluded")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=471769632]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_ilwks")
-selector = NodePath("Panel")
-offset = Vector2(-700, -100)
-radius = 1000.0
-separation = 200.0
-circle_center = Vector2(-500, 0)
-flip = true
-scale_multiplier = 0.0
-excluded = [NodePath("Panel")]
-metadata/_custom_type_script = "uid://do68mss3tsghl"
 
-[node name="Panel" type="Panel" parent="RadialSelector" unique_id=1853419224]
-custom_minimum_size = Vector2(1000, 200)
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1405154476]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control" unique_id=875252491]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+
+[node name="BossfightSelector" parent="HBoxContainer" unique_id=1761212608 instance=ExtResource("2_qe6cn")]
+layout_mode = 2
+size_flags_horizontal = 3
+target_scroll_angle = -1.3992595454461982e-136
+
+[node name="BossfightShowcase" parent="HBoxContainer/BossfightSelector" unique_id=1792970499 instance=ExtResource("3_1vb1o")]
+layout_mode = 2
+bossfight_data = ExtResource("4_qe6cn")
+
+[node name="BossfightShowcase2" parent="HBoxContainer/BossfightSelector" unique_id=683639221 instance=ExtResource("3_1vb1o")]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="RadialSelector" unique_id=440392256]
-custom_minimum_size = Vector2(500, 150)
+[node name="BossfightShowcase3" parent="HBoxContainer/BossfightSelector" unique_id=1603028252 instance=ExtResource("3_1vb1o")]
 layout_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="RadialSelector" unique_id=163777984]
-custom_minimum_size = Vector2(500, 150)
+[node name="BossfightShowcase4" parent="HBoxContainer/BossfightSelector" unique_id=1378500809 instance=ExtResource("3_1vb1o")]
 layout_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="RadialSelector" unique_id=639388563]
-custom_minimum_size = Vector2(500, 150)
+[node name="BossfightShowcase5" parent="HBoxContainer/BossfightSelector" unique_id=1150231388 instance=ExtResource("3_1vb1o")]
 layout_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="RadialSelector" unique_id=1190455431]
-custom_minimum_size = Vector2(500, 150)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="RadialSelector" unique_id=747436702]
-custom_minimum_size = Vector2(500, 150)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="RadialSelector" unique_id=1780539391]
-custom_minimum_size = Vector2(500, 150)
+[node name="BossfightShowcase6" parent="HBoxContainer/BossfightSelector" unique_id=153188522 instance=ExtResource("3_1vb1o")]
 layout_mode = 2

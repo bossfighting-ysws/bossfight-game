@@ -1,9 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://c46qh7pu75s83"]
 
-[ext_resource type="FontFile" uid="uid://c5idjj6x8qacl" path="res://assets/fonts/origa.ttf" id="1_dvv7a"]
+[ext_resource type="FontFile" uid="uid://degynf4t5hcbm" path="res://assets/fonts/jersey15/jersey15-Regular.ttf" id="1_dvv7a"]
 
 [resource]
 default_font = ExtResource("1_dvv7a")
-default_font_size = 40
-Button/font_sizes/font_size = 30
+default_font_size = 100
+Button/font_sizes/font_size = 50
 VBoxContainer/constants/separation = 20
